@@ -16,10 +16,16 @@ const BlogCard = (props: Props) => {
                 {props.post.frontMatter.title}
             </a>
             <br />
-            <span className="font-mono text-md text-gray-400 my-4">
-                {props.post.frontMatter.date} | 10 min read
-            </span>
-            <br />
+            <div className="font-mono text-md text-gray-400 mt-2">
+                {props.post.frontMatter.date} |
+                {props.post.frontMatter.tags.map((tag: string) => (
+                    <Link key={tag} href={`/tags/${tag}`}>
+                        <a className="text-gray-400 font-mono mr-2 bg-slate-600 p-1 rounded-sm">
+                            {tag}
+                        </a>
+                    </Link>
+                ))}
+            </div>
             <p className="font-sans text-md text-white my-3">
                 {props.post.frontMatter.description}
             </p>

@@ -14,6 +14,9 @@ const MainPage = () => {
                 </h1>
                 <AboutMe />
                 <MeDetails />
+                {/* <button className="text-gray-800 py-2 px-4 rounded-md mt-8 bg-teal-400 hover:bg-teal-500">
+                    My works
+                </button> */}
             </div>
             <div className="hidden lg:block">
                 <Image
