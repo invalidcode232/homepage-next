@@ -5,19 +5,9 @@ import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import Layout from '../../components/Layout';
 import styles from '../../styles/Post.module.css';
+import { PostData } from '../../types/type';
 
 const components = {};
-
-type PostData = {
-    frontMatter: {
-        title: string;
-        date: string;
-    };
-    mdxSource: {
-        body: string;
-        compiledSource: string;
-    };
-};
 
 const PostPage = ({ frontMatter: { title, date }, mdxSource }: PostData) => {
     return (

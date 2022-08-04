@@ -2,33 +2,25 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import path from 'path';
+import BlogCard from '../../components/Blog/BlogCard';
 import Layout from '../../components/Layout';
+import { PostData } from '../../types/type';
 
-type Post = {
-    frontMatter: {
-        [key: string]: any;
-        title: string;
-        date: string;
-        description: string;
-    };
-    slug: string;
-};
-
-const BlogIndex = ({ posts }: { posts: Post[] }) => {
-    console.log(posts);
+const BlogIndex = ({ posts }: { posts: PostData[] }) => {
     return (
         <Layout>
             <h1 className="text-4xl font-bold mb-5">Blogs 📕</h1>
-            <div className="posts md:grid md:grid-cols-3 gap-8">
+            <div className="">
                 {posts.map((post) => (
-                    <Link href={`/blogs/${post.slug}`} key={post.slug}>
-                        <a
-                            href={`/blogs/${post.slug}`}
-                            className="font-mono text-xl hover:underline hover:text-blue-500"
-                        >
-                            {post.slug}
-                        </a>
-                    </Link>
+                    // <Link href={`/blogs/${post.slug}`} key={post.slug}>
+                    //     <a
+                    //         href={`/blogs/${post.slug}`}
+                    //         className="font-mono text-xl hover:underline hover:text-blue-500"
+                    //     >
+                    //         {post.slug}
+                    //     </a>
+                    // </Link>
+                    <BlogCard key={post.slug} post={post} />
                 ))}
             </div>
         </Layout>
