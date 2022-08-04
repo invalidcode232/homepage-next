@@ -18,7 +18,7 @@ const MeDetails = () => {
                 <br />
                 <FaGithub className="inline mr-2" />
                 <a href="#" className="hover:underline hover:text-blue-500">
-                    invalidcode232
+                    github.com/invalidcode232
                 </a>
                 <br />
                 <FaCode className="inline mr-2" />

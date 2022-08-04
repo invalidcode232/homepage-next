@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const MainPage = () => {
     return (
-        <>
+        <div className="flex justify-between text-center md:text-left">
             <div>
                 <span className="text-lg text-gray-400 font-mono">
                     Hello, I am{' '}
@@ -15,7 +15,7 @@ const MainPage = () => {
                 <AboutMe />
                 <MeDetails />
             </div>
-            <div>
+            <div className="hidden lg:block">
                 <Image
                     className="float-right w-4/5 rounded-full"
                     src="https://avatars.githubusercontent.com/u/78639481?v=4"
@@ -24,7 +24,7 @@ const MainPage = () => {
                     height={200}
                 />
             </div>
-        </>
+        </div>
     );
 };
 
