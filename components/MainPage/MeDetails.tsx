@@ -9,7 +9,7 @@ import {
 const MeDetails = () => {
     return (
         <>
-            <div className="font-mono text-gray-300 mt-10">
+            <div className="font-mono text-lg text-gray-300 mt-10">
                 <FaBriefcase className="inline mr-2" />
                 Full time <span className="text-blue-500">student</span>
                 <br />
@@ -17,8 +17,9 @@ const MeDetails = () => {
                 Jakarta, <span className="text-blue-500">Indonesia</span> 🇮🇩
                 <br />
                 <FaGithub className="inline mr-2" />
+                github.com/
                 <a href="#" className="hover:underline hover:text-blue-500">
-                    github.com/invalidcode232
+                    <span className="text-blue-500">invalidcode232</span>
                 </a>
                 <br />
                 <FaCode className="inline mr-2" />

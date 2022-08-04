@@ -16,6 +16,9 @@ const nextConfig = withMDX({
         domains: ['avatars.githubusercontent.com'],
     },
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+    experimental: {
+        images: { allowFutureImage: true },
+    },
 });
 
 module.exports = nextConfig;

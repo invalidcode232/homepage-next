@@ -1,15 +1,15 @@
 import AboutMe from './AboutMe';
 import MeDetails from './MeDetails';
-import Image from 'next/image';
+import Image from 'next/future/image';
 
 const MainPage = () => {
     return (
         <div className="flex justify-between text-center md:text-left">
             <div>
-                <span className="text-lg text-gray-400 font-mono">
+                <span className="text-xl text-gray-400 font-mono">
                     Hello, I am{' '}
                 </span>
-                <h1 className="text-5xl text-bold font-sans tracking-wide mt-3 mb-5">
+                <h1 className="text-6xl text-bold font-sans tracking-wide mt-3 mb-8">
                     invalidcode
                 </h1>
                 <AboutMe />
@@ -17,11 +17,11 @@ const MainPage = () => {
             </div>
             <div className="hidden lg:block">
                 <Image
-                    className="float-right w-4/5 rounded-full"
+                    className="float-right rounded-full"
                     src="https://avatars.githubusercontent.com/u/78639481?v=4"
                     alt="profile picture"
-                    width={200}
-                    height={200}
+                    width={300}
+                    height={300}
                 />
             </div>
         </div>
