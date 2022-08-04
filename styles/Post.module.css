@@ -1,0 +1,7 @@
+.post p {
+    @apply text-white;
+}
+
+.post {
+    @apply mt-5;
+}

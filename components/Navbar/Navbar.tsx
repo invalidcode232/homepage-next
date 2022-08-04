@@ -1,11 +1,13 @@
-import Hamburger from './Mobile/Hamburger';
+import Link from 'next/link';
 import MobileNav from './Mobile/MobileNav';
 import NavbarLinks from './NavbarLinks';
 
 const Navbar = () => {
     return (
         <header className="flex justify-between font-mono">
-            <a className="text-xl hover:cursor-pointer">invalid.codes</a>
+            <Link className="text-xl hover:cursor-pointer" href="/">
+                invalid.codes
+            </Link>
             <div className="hidden md:flex">
                 <NavbarLinks />
             </div>
