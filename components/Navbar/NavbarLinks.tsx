@@ -7,7 +7,7 @@ type Props = {};
 const NavbarLinks = (props: Props) => {
     return (
         <div className={'flex flex-col md:flex-row'}>
-            <NavbarLink href="https://open.spotify.com/playlist/2LwDo5R8Po8m1CeWdD0Hvy?si=5cdf28ff64f1472a">
+            <NavbarLink href="/blogs">
                 <FaBook className="inline mr-1" />
                 blogs/
             </NavbarLink>

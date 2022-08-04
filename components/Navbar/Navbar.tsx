@@ -5,8 +5,10 @@ import NavbarLinks from './NavbarLinks';
 const Navbar = () => {
     return (
         <header className="flex justify-between font-mono">
-            <Link className="text-xl hover:cursor-pointer" href="/">
-                invalid.codes
+            <Link href="/">
+                <span className="text-xl hover:cursor-pointer">
+                    invalid.codes
+                </span>
             </Link>
             <div className="hidden md:flex">
                 <NavbarLinks />
