@@ -1,12 +1,16 @@
 import React from 'react';
-import { FaBook, FaGithub, FaSpotify } from 'react-icons/fa';
+import { FaBook, FaGithub, FaSpotify, FaStar } from 'react-icons/fa';
 import NavbarLink from './NavbarLink';
 
 type Props = {};
 
 const NavbarLinks = (props: Props) => {
     return (
-        <div className={'flex flex-col md:flex-row text-lg'}>
+        <div className={'flex flex-col md:flex-row'}>
+            <NavbarLink href="/my-works" external={false}>
+                <FaStar className="inline mr-1" />
+                my-works/
+            </NavbarLink>
             <NavbarLink href="/blogs" external={false}>
                 <FaBook className="inline mr-1" />
                 blogs/
