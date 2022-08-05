@@ -6,7 +6,7 @@ const MainPage = () => {
     return (
         <div className="flex justify-between text-center md:text-left">
             <div>
-                <span className="text-xl text-gray-400 font-mono">
+                <span className="text-2xl text-gray-400 font-mono">
                     Hello, I am{' '}
                 </span>
                 <h1 className="text-6xl text-bold font-sans tracking-wide mt-3 mb-8">

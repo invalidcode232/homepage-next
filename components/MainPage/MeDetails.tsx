@@ -9,7 +9,7 @@ import {
 const MeDetails = () => {
     return (
         <>
-            <div className="font-mono text-lg text-gray-300 mt-10">
+            <div className="font-mono text-xl text-gray-300 mt-10 leading-8">
                 <FaBriefcase className="inline mr-2" />
                 Full time <span className="text-blue-500">student</span>
                 <br />
