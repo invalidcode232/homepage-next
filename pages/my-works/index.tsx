@@ -4,7 +4,7 @@ import WorkCard from '../../components/MyWorks/WorkCard';
 
 const Home: NextPage = () => {
     return (
-        <Layout>
+        <Layout title="My works">
             <h1 className="text-4xl font-semibold mb-8">My works</h1>
             <div className="flex flex-wrap">
                 <WorkCard

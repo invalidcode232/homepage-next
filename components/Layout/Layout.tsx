@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 
 type Props = {
     children: React.ReactNode;
+    title: string;
 };
 
 const Layout = (props: Props) => {
@@ -14,7 +15,7 @@ const Layout = (props: Props) => {
     return (
         <div className="bg-slate-800 px-5 md:px-8 lg:px-[17rem] py-3 text-white w-screen h-screen flex flex-col">
             <Head>
-                <title>invalid.codes</title>
+                <title>{props.title} | invalid.codes</title>
                 <meta
                     name="description"
                     content="invalidcode232's personal homepage"

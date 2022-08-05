@@ -4,7 +4,7 @@ import MainPage from '../components/MainPage';
 
 const Home: NextPage = () => {
     return (
-        <Layout>
+        <Layout title="Home">
             <MainPage />
         </Layout>
     );

@@ -11,7 +11,7 @@ const components = {};
 
 const PostPage = ({ frontMatter: { title, date }, mdxSource }: PostData) => {
     return (
-        <Layout>
+        <Layout title={title}>
             <h1 className="font-semibold text-3xl mb-2">{title}</h1>
             <span className="text-gray-400 font-mono mb-5">{date}</span>
             <div className={styles.post}>
