@@ -12,7 +12,7 @@ type Props = {
 const Layout = (props: Props) => {
     const router = useRouter();
 
-    const title = `${props.title} | invalidcodes`;
+    const title = `${props.title} | invalid.codes`;
 
     return (
         <div className="bg-slate-800 px-5 md:px-8 lg:px-[17rem] py-3 text-white w-screen h-screen flex flex-col">
