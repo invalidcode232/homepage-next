@@ -12,7 +12,10 @@ const NavbarLink = (props: Props) => {
         <a
             className="mr-5 hover:underline hover:text-blue-400 hover:cursor-pointer"
             href={props.href}
-            {...(props.external && { target: '_blank' })}
+            {...(props.external && {
+                target: '_blank',
+                rel: 'noopener noreferrer',
+            })}
         >
             {props.children}
         </a>

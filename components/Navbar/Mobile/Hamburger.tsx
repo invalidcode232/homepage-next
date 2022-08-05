@@ -7,11 +7,11 @@ type Props = {
 };
 
 const Hamburger = (props: Props) => {
-    const clr = props.navOpen === false ? 'bg-blue-500' : 'bg-blue-600';
+    const clr = props.navOpen === false ? 'bg-teal-400' : 'bg-teal-500';
 
     return (
         <button
-            className={`${clr} block sm:hidden p-3 rounded-md`}
+            className={`${clr} block sm:hidden p-3 rounded-md text-black`}
             onClick={props.setNavOpen}
         >
             <FaBars />

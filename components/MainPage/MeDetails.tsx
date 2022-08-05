@@ -18,7 +18,12 @@ const MeDetails = () => {
                 <br />
                 <FaGithub className="inline mr-2" />
                 github.com/
-                <a href="#" className="hover:underline hover:text-blue-500">
+                <a
+                    href="https://github.com/invalidcode232"
+                    target={'_blank'}
+                    rel={'noopener noreferrer'}
+                    className="hover:underline hover:text-blue-500"
+                >
                     <span className="text-blue-500">invalidcode232</span>
                 </a>
                 <br />
