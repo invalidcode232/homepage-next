@@ -1,5 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
+import dynamic from 'next/dynamic';
 import path from 'path';
 import BlogCard from '../../components/Blog/BlogCard';
 import Layout from '../../components/Layout';

@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <header className="flex justify-between font-mono">
             <Link href="/">
-                <span className="text-xl hover:cursor-pointer">
+                <span className="text-2xl hover:cursor-pointer">
                     invalid.codes
                 </span>
             </Link>
