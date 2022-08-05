@@ -4,7 +4,7 @@ import NavbarLinks from './NavbarLinks';
 
 const Navbar = () => {
     return (
-        <header className="flex justify-between font-mono">
+        <header className="flex justify-between font-mono mt-2">
             <Link href="/">
                 <span className="text-xl hover:cursor-pointer">
                     invalid.codes

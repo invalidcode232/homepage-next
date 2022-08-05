@@ -10,7 +10,7 @@ type Props = {
 
 const WorkCard = (props: Props) => {
     return (
-        <div className="w-2/5 mr-3 mb-3 bg-slate-700 p-4 rounded-lg shadow-md">
+        <div className="w-screen md:w-2/5 mr-3 mb-3 bg-slate-700 p-4 rounded-lg shadow-md">
             <h1 className="text-xl font-semibold">{props.title}</h1>
             <div className="flex font-mono text-sm mt-2">
                 {/* <div className="bg-slate-500 px-2 rounded-md mr-2">node.js</div>
