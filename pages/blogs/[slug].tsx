@@ -10,53 +10,55 @@ import { PostData } from '../../types/type';
 const components = {};
 
 const PostPage = ({ frontMatter: { title, date }, mdxSource }: PostData) => {
-    return (
-        <Layout title={title}>
-            <h1 className="font-semibold text-3xl mb-2">{title}</h1>
-            <span className="text-gray-400 font-mono mb-5">{date}</span>
-            <div className={styles.post}>
-                <MDXRemote {...mdxSource} components={components} />
-            </div>
-        </Layout>
-    );
+	return (
+		<Layout title={title}>
+			<h1 className="font-semibold text-3xl mb-2">{title}</h1>
+			<span className="text-gray-400 font-mono mb-5">{date}</span>
+			<div className={styles.post}>
+				<MDXRemote {...mdxSource} components={components} />
+			</div>
+		</Layout>
+	);
 };
 
 const getStaticPaths = () => {
-    const files = fs.readdirSync(path.join('posts'));
+	const files = fs.readdirSync(path.join('posts'));
 
-    const paths = files.map((file) => {
-        return {
-            params: {
-                slug: file.replace('.mdx', ''),
-            },
-        };
-    });
+	const paths = files.map((file) => {
+		return {
+			params: {
+				slug: file.replace('.mdx', ''),
+			},
+		};
+	});
 
-    return {
-        paths,
-        fallback: false,
-    };
+	return {
+		paths,
+		fallback: false,
+	};
 };
 
 type StaticProps = {
-    params: {
-        slug: string;
-    };
+	params: {
+		slug: string;
+	};
 };
 
 const getStaticProps = async ({ params: { slug } }: StaticProps) => {
-    const markdownWithMeta = fs.readFileSync(path.join('posts', slug + '.mdx'));
+	const markdownWithMeta = fs.readFileSync(path.join('posts', slug + '.mdx'));
 
-    const { data: frontMatter, content } = matter(markdownWithMeta);
-    const mdxSource = await serialize(content);
+	const { data: frontMatter, content } = matter(markdownWithMeta);
+	const mdxSource = await serialize(content, {
+		mdxOptions: { development: false, },
+	});
 
-    return {
-        props: {
-            frontMatter,
-            slug,
-            mdxSource,
-        },
-    };
+	return {
+		props: {
+			frontMatter,
+			slug,
+			mdxSource,
+		},
+	};
 };
 
 export { getStaticProps, getStaticPaths };
